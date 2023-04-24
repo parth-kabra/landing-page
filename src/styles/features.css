@@ -55,7 +55,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
+        height: auto;
+    }
 	.about__info{
 		width: 90%;
 	}
