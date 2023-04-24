@@ -36,13 +36,14 @@
 }
 
 input, textarea{
-	width: 100%;
+	width: 60%;
 	outline: none;
 	border: none;
 	color: var(--dark-color);
 	font-family: 'Poppins';
 	padding: .8rem;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(233, 255, 245);
+	border: 1px solid gray;
 	border-radius: 5px;
 	resize: none;
 	transition: .4s;

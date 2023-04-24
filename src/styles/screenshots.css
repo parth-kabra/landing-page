@@ -21,6 +21,7 @@
 .shot{
     width: 90%;
     display: grid;
+    align-items: center;
 	line-height: 1.4;
 	padding: 1rem;
 	--auto-grid-min-size: 250px;

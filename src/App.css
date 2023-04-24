@@ -177,3 +177,7 @@ circle {
 		stroke-dashoffset: -125px;
 	}
 }
+
+.home:nth-child(1){
+	margin-left: 0px;	
+}
