@@ -1,0 +1,98 @@
+.contact{
+	padding-top: 5rem;
+	width: 100%;
+	display: flex;
+    position: relative;
+    background-image: url("../img/background.jpg");
+	justify-content: center;
+    flex-direction: column;
+	align-items: center;
+}
+
+.contact__title{
+	color: #cecece;
+	font-size: var(--title);
+	width: 48%;
+}
+
+.contact__main{
+    width: 50%;
+    justify-content: center;
+    display: flex;
+	border: 1px solid gray;
+	border-radius: 8px;
+	padding: 1.6rem;
+}
+
+.form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.input__name{
+	font-size: medium;
+}
+
+input, textarea{
+	width: 100%;
+	outline: none;
+	border: none;
+	color: var(--dark-color);
+	font-family: 'Poppins';
+	padding: .8rem;
+    background-color: rgb(241, 241, 241);
+	border-radius: 5px;
+	resize: none;
+	transition: .4s;
+}
+
+input::placeholder, textarea::placeholder{
+    color: black;
+}
+
+textarea{
+	height: 10rem;
+}
+
+input:focus, textarea:focus{
+	outline: 1px solid rgb(5, 144, 194);
+	box-shadow: 0px 0px 12px 0px rgba(5, 144, 194,0.75);
+	-webkit-box-shadow: 0px 0px 12px 0px rgba(5, 144, 194,0.75);
+	-moz-box-shadow: 0px 0px 12px 0px rgba(5, 144, 194,0.75);
+}
+
+
+@media screen and (max-width:786px) {
+	.contact__main{
+		flex-direction: column;
+		width: 94%;
+	}
+	.contact__title{
+		width: 100%;
+	}
+	.form{
+		margin-top: 1rem;
+		width: 80%;
+	}
+	input, textarea{
+		width: 90%;
+	}
+	.contact__btn{
+		width: 45%;
+	}
+}
+
+@media screen and (max-width:500px) {
+	input, textarea{
+		width: 100%;
+	}
+	.contact__main{
+		width: 98%;
+	}
+}
+
+.love{
+    font-family: "Nunito";
+}

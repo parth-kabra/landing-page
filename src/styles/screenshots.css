@@ -1,0 +1,41 @@
+.title{
+    font-size: var(--about-title);
+    font-family: "Nunito";
+    margin-top: 5rem;
+}
+
+.screenshots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shots{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shot{
+    width: 90%;
+    display: grid;
+	line-height: 1.4;
+	padding: 1rem;
+	--auto-grid-min-size: 250px;
+	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+	grid-gap: 2rem;
+	justify-content: center;
+}
+
+.shot__img{
+    border-radius: 10px;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../img/screenshot.png");
+}
+
+.screen{
+    background-image: url("../img/background.jpg");
+}

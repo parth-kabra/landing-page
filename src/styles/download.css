@@ -1,0 +1,10 @@
+
+.download__btn .button{
+    background:transparent;
+    color: var(--dark-color);
+}
+
+
+.download__img{
+    border-radius: 10px;
+}

@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+@import url("https://use.typekit.net/fyw5yob.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+*{
+		margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+	--header-height: 5rem;
+	--font-semi: 600;
+	--font-bold: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+		--white-color:#f5f5f5;
+		--dark-color:#101214;
+		--grayishBlue: hsl(229, 6%, 66%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+:root {
+	--body-font: 'poppins', sans-serif; 
+	--big-font-size: 3rem;
+	--h1-font-size: 1.5rem;
+	--title:3rem;
+	--about-title:2rem;
+	--h2-font-size: 1.25rem;
+	--normal-font-size: .938rem;
+	--small-font-size: .75rem;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 768px) {
+	:root {
+	--big-font-size: 6rem;
+	--h1-font-size: 2.25rem;
+	--h2-font-size: 1.5rem;
+	--title:5rem;
+	--about-title:3rem;
+	--normal-font-size: 1rem;
+	--small-font-size: .813rem;
+	}	
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+	--mb-1: .5rem;
+	--mb-2: 1rem;
+	--mb-3: 1.5rem;
+	--mb-4: 2rem;
+}
+
+:root {
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+*,::before,::after{
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+	
+::-webkit-scrollbar-track {
+	background: #4f4f4f; 
+}
+	 
+::-webkit-scrollbar-thumb {
+	background: rgb(99, 99, 99); 
+}
+	
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(119, 119, 119); 
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	background-color: #f5f5dc;
+	color: var(--dark-color);
+	line-height: 1.6;
+}
+
+h1,h2,p{
+	margin: 0; 
+}
+
+a{
+	text-decoration: none;
+	color: var(--dark-color);
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.text{
+	background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*<==BUTTONS==>*/
+.button{
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(91.9deg, rgb(0, 170, 255) 6.3%, rgb(45, 169, 251) 98.9%);
+	color: var(--white-color);
+	padding: .8rem; 
+	font-size: medium;
+	margin: 0 10px;
+	font-weight: var(--font-semi);
+	font-family: "Nunito";
+	border-radius: 10px;
+	transition: .3s;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.button i{
+	font-size: x-large;
+}
+
+.button:hover{
+	box-shadow: 0 5px 2000px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.loading{
+	width: 100%;
+	height: 100vh;
+    background-image: url("./img/background.jpg");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+svg {
+	width: 3.25em;
+	transform-origin: center;
+	animation: rotate4 2s linear infinite;
+}
+
+circle {
+	fill: none;
+	stroke: black;
+	stroke-width: 2;
+	stroke-dasharray: 1, 200;
+	stroke-dashoffset: 0;
+	stroke-linecap: round;
+	animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dash4 {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+
+	50% {
+		stroke-dasharray: 90, 200;
+		stroke-dashoffset: -35px;
+	}
+
+	100% {
+		stroke-dashoffset: -125px;
+	}
 }
